@@ -1,0 +1,17 @@
+version: '3'
+services:
+  my-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: my-app
+    volumes:
+      - ".:/app/:rw"
+    env_file: .env
+    ports:
+      - "5000:${PORT}"
+    networks:
+      - my-app-network
+
+networks:
+  my-app-network:
