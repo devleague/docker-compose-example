@@ -3,7 +3,7 @@
 
 ### Setup
 1. `cp .env.example .env`
-2. Edit `.env` variables
+2. Edit `.env` variable for `PORT` and `IMAGE_VERSION`
 
 ### To build project
 `docker-compose build`
@@ -41,3 +41,4 @@
 
 ### References
 - [docker-compose command line reference](https://docs.docker.com/compose/reference/)
+- [docker-compose multiple environment configuration](https://docs.docker.com/compose/extends/)
