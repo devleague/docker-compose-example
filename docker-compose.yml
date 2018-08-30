@@ -2,4 +2,4 @@ version: '3'
 services:
   my-app:
     build: .
-    image: jaywon/demo-website:${IMAGE_VERSION}
+    image: jaywon/demo-website:local

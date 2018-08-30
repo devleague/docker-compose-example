@@ -1,13 +1,14 @@
 version: '3'
 services:
   my-app:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
+    image: jaywon/demo-website:${IMAGE_VERSION}-local
+    command: ["./node_modules/.bin/nodemon", "app.js"]
     container_name: my-app
     volumes:
       - ".:/app/:rw"
     env_file: .env
+    environment:
+      NODE_ENV: development
     ports:
       - "5000:${PORT}"
     networks:

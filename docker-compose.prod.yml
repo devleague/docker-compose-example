@@ -1,0 +1,6 @@
+version: '3'
+services:
+  my-app:
+    image: jaywon/demo-website:${IMAGE_VERSION}
+    environment:
+      NODE_ENV: production
